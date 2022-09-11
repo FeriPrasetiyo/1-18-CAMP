@@ -3,6 +3,12 @@ const readline = require('readline');
 const fs = require('fs');
 const { get } = require('http');
 
+
+if (!process.argv[2]) {
+    console.log('Tolong sertakan inputan soalnya')
+    console.log('Misalnya \'node solution.js data.json\'')
+    process.exit(1);
+}
         let dataPertanyaan = fs.readFileSync(process.argv[2], "utf-8")
         let data = JSON.parse(dataPertanyaan)
 
