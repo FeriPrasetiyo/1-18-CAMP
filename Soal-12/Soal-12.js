@@ -1,14 +1,9 @@
 
-
 const readline = require('readline');
 const fs = require('fs');
 const { get } = require('http');
 
-if (process.argv[2] === 'data.json') {
-    fs.readFile('data.json', (err, data) => {
-        if (err) throw err;
-
-        let dataPertanyaan = fs.readFileSync('data.json', "utf-8")
+        let dataPertanyaan = fs.readFileSync(process.argv[2], "utf-8")
         let data = JSON.parse(dataPertanyaan)
 
         let rl = readline.createInterface({
@@ -56,7 +51,3 @@ if (process.argv[2] === 'data.json') {
             console.log(`good bye !`)
             process.exit()
         })
-    })
-    }else {
-        console.log('Tolong sertakan nama file sebagai inputan soalnya \nMisalnya "node solution.js data.json"');
-    }
