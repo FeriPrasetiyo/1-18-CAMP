@@ -1,0 +1,28 @@
+buat database 
+Mahasiswa   :   nim             INT(11)
+                nama            VARCHAR(50)
+                alamat          TEXT
+                jurusan         VARCHAR(50)
+jurusan     :   id_jurusan      INT(5)
+                nama jurusan    VARCHAR (5O)
+dosen       :   id_dosen        INT(3)
+                nama dosen      VARCHAR(11)
+matakuliah  :   id_matakuliah   INT (5)
+                nama            VARCHAR (50)
+                sks             INT (1)
+            
+12334|feri|tangerang|teknik informatika
+1345|tajuddin|tangerang|teknik informatika
+15125|fahri|bogor|teknik informatika
+
+
+5122|teknik informatika
+
+
+
+
+123|java|4
+231|php|3
+234|sql|2
+
+123|mahmut
