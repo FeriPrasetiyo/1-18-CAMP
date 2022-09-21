@@ -27,7 +27,7 @@ class Agya extends Car {
 
 class Rush extends Car {
     constructor() {
-        super("Rush", 2020, 4, 4, 6, 2021, 5, new Tyre(4, "Achilles"))
+        super("Rush", 2020, 4, 4, 6, 2021, 6, new Tyre(4, "Achilles"))
     }
 }
 
