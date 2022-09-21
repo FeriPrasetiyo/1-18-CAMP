@@ -75,6 +75,5 @@ class CarFactory {
     }
 }
 let Toyota = new CarFactory('Agya', 'Rust');
-let date = (2023)
-Toyota.produksi(date);
-Toyota.garansi(date)
+Toyota.produksi(2020);
+Toyota.garansi(2025)
