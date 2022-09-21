@@ -59,14 +59,14 @@ class CarFactory {
             if (year > (this.cars[i].pembuatan + this.cars[i].warranty)) {
                 count++
                 console.log(`no ${count}`)
-                console.log(`Memiliki Ban ${this.cars[i].ban} bertipe ${this.cars[i].tyre} dan kursi sebanyak ${this.cars[i].bangku}`)
+                console.log(`Memiliki Ban ${this.cars[i].ban} bertipe ${this.cars[i].tyre.size} ${this.cars[i].tyre.brand} dan kursi sebanyak ${this.cars[i].bangku}`)
                 console.log(`Tipe ${this.cars[i].model} Tahun Pembuatan ${this.cars[i].pembuatan} tahun,warranty sudah tidak AKTIF karena sudah melawati ${y}`)
                 console.log("============================================================")
             } else {
                 count++
                 console.log()
                 console.log(`no ${count}`)
-                console.log(`Memiliki Ban ${this.cars[i].ban} bertipe ${this.cars[i].tyre} dan kursi sebanyak ${this.cars[i].bangku}`)
+                console.log(`Memiliki Ban ${this.cars[i].ban} bertipe ${this.cars[i].tyre.size} ${this.cars[i].tyre.brand} dan kursi sebanyak ${this.cars[i].bangku}`)
                 console.log(`Tipe ${this.cars[i].model} Tahun Pembuatan ${this.cars[i].pembuatan} tahun,warranty masi Berlaku sampai ${y}`)
             }
 
