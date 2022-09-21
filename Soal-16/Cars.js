@@ -36,19 +36,15 @@ class CarFactory {
         this.tipe1 = tipe1;
         this.tipe2 = tipe2;
         this.cars = [];
-
-    }
-    static random() {
-        return Math.floor(Math.random() * 10) + 1;
     }
     produksi(year) {
         let getAgya = 0;
-        for (let i = 0; i < CarFactory.random(); i++) {
+        for (let i = 0; i < Math.random() * 10; i++) {
             this.cars.push(new Agya(year))
             getAgya++
         }
         let getRush = 0;
-        for (let i = 0; i < CarFactory.random(); i++) {
+        for (let i = 0; i < Math.random() * 10; i++) {
             this.cars.push(new Rush(year))
             getRush++
         }
@@ -79,6 +75,6 @@ class CarFactory {
     }
 }
 let Toyota = new CarFactory('Agya', 'Rust');
-let date = (Math.floor(Math.random() * 10) + 2020)
+let date = (2023)
 Toyota.produksi(date);
 Toyota.garansi(date)
