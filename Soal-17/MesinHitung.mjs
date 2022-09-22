@@ -21,11 +21,11 @@ export default class MesinHitung {
         return this;
     }
     square(){
-        this.x **=2;
+        this.x = Math.pow(this.x,2);
         return this;
     }
     exponent(num){
-        this.x **=num;
+        this.x = Math.pow(this.x,num);
         return this;
     }
     squareRoot(){
