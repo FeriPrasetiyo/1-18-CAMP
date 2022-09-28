@@ -182,9 +182,9 @@ class Mahasiswa {
     }
     static daftarMahasiswa() {
         const tableMahasiswa = new Table({
-            head: ['NIM', 'Nama', 'Tanggal Lahir', 'Alamat', 'Kode Jurusan']
+            head: ['NIM', 'Nama', 'Tanggal Lahir', 'Alamat', 'Kode Jurusan', 'Nama Jurusan']
         });
-        db.all('SELECT * FROM Mahasiswas', (err, data) => {
+        db.all('SELECT * FROM Mahasiswas join Jurusans on Mahasiswas.Jurusan = Jurusans.id_jurusan', (err, data) => {
             if (err) {
                 console.log('gagal ambil data', err)
                 process.exit(1)
@@ -195,7 +195,8 @@ class Mahasiswa {
                     item.Nama,
                     item.dob,
                     item.Alamat,
-                    item.Jurusan
+                    item.Jurusan,
+                    item.Nama_Jurusan
                 ])
             });
             console.log(tableMahasiswa.toString())
@@ -291,6 +292,7 @@ class Dosen {
         })
     }
     static daftarDosen() {
+        Dosen.menuDosen()
         const tableDosen = new Table({
             head: ['Nip', 'Nama']
         });
